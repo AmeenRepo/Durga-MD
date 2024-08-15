@@ -6,8 +6,7 @@ let handler = async (m, { text, usedPrefix, command }) => {
     await fs.writeFileSync(path, m.quoted.text)
     m.reply(`STORED ${path}`)
 }
-handler.customPrefix = ('$set', '.set')
-handler.command = new RegExp
+handler.command = ['try']
 handler.tags = ['Own']
 handler.help = ['set']
 handler.rowner = false
